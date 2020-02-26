@@ -1,4 +1,4 @@
-update=Di 25 Feb 2020 15:11:06 CET
+update=Mi 26 Feb 2020 12:38:25 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -9,10 +9,20 @@ version=1
 [eeschema]
 version=1
 LibDir=
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=39
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=hub.net
+LastNetListRead=mpcie-msata.net
 CopperLayerCount=4
 BoardThickness=1.6
 AllowMicroVias=0
@@ -264,13 +274,3 @@ uViaDrill=0.1
 dPairWidth=0.3
 dPairGap=0.3
 dPairViaGap=0.25
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
-LabSize=39
-ERC_TestSimilarLabels=1
