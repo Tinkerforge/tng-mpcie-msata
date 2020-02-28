@@ -1127,8 +1127,6 @@ F 3 "" H 10500 8650 60  0000 C CNN
 	1    10500 8650
 	0    -1   1    0   
 $EndComp
-NoConn ~ 9600 7850
-NoConn ~ 9600 7550
 $Comp
 L tinkerforge:Rs R?
 U 1 1 5E1A10F6
@@ -1402,23 +1400,17 @@ Wire Wire Line
 	9600 3800 9700 3800
 Wire Wire Line
 	12050 7150 12350 7150
-NoConn ~ 9600 3700
-NoConn ~ 9600 5900
-NoConn ~ 9600 6000
-NoConn ~ 9600 6400
-NoConn ~ 9600 6500
-NoConn ~ 9600 7450
 $Comp
 L tinkerforge:CONN_01X01 P?
 U 1 1 5E1A1239
-P 10500 5000
+P 10500 5400
 AR Path="/5DF4E89A/5E1A1239" Ref="P?"  Part="1" 
 AR Path="/5E1A1239" Ref="P101"  Part="1" 
-F 0 "P101" H 10578 5041 50  0000 L CNN
-F 1 "Debug" H 10578 4950 50  0000 L CNN
-F 2 "kicad-libraries:DEBUG_PAD" H 10578 4904 50  0001 L CNN
-F 3 "" H 10500 5000 50  0000 C CNN
-	1    10500 5000
+F 0 "P101" H 10578 5441 50  0000 L CNN
+F 1 "Debug" H 10578 5350 50  0000 L CNN
+F 2 "kicad-libraries:DEBUG_PAD" H 10578 5304 50  0001 L CNN
+F 3 "" H 10500 5400 50  0000 C CNN
+	1    10500 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1549,36 +1541,36 @@ Wire Wire Line
 	14500 5300 14500 5750
 Wire Wire Line
 	15600 5300 15600 5750
-Text GLabel 9700 6200 2    39   Output ~ 0
+Text GLabel 9700 4300 2    39   Output ~ 0
 USB_RESET
 Wire Wire Line
-	11000 3300 10850 3300
+	11000 4400 10850 4400
 Wire Wire Line
-	10650 3300 10450 3300
+	10650 4400 10450 4400
 $Comp
 L tinkerforge:Rs R?
 U 1 1 656056C6
-P 10750 3300
+P 10750 4400
 AR Path="/5AFDB425/656056C6" Ref="R?"  Part="1" 
 AR Path="/656056C6" Ref="R121"  Part="1" 
-F 0 "R121" V 10850 3300 50  0000 C CNN
-F 1 "1k" V 10750 3300 50  0000 C CNN
-F 2 "R0402F" H 10821 3209 60  0001 L CNN
-F 3 "" H 10750 3300 60  0000 C CNN
-	1    10750 3300
+F 0 "R121" V 10850 4400 50  0000 C CNN
+F 1 "1k" V 10750 4400 50  0000 C CNN
+F 2 "R0402F" H 10821 4309 60  0001 L CNN
+F 3 "" H 10750 4400 60  0000 C CNN
+	1    10750 4400
 	0    -1   1    0   
 $EndComp
 $Comp
 L tinkerforge:LED D?
 U 1 1 656056CC
-P 10250 3300
+P 10250 4400
 AR Path="/5AFDB425/656056CC" Ref="D?"  Part="1" 
 AR Path="/656056CC" Ref="D102"  Part="1" 
-F 0 "D102" H 10250 3400 50  0000 C CNN
-F 1 "LED" H 10250 3200 50  0000 C CNN
-F 2 "D0603F" H 10250 3300 50  0001 C CNN
-F 3 "" H 10250 3300 50  0000 C CNN
-	1    10250 3300
+F 0 "D102" H 10250 4500 50  0000 C CNN
+F 1 "blue" H 10050 4500 50  0000 C CNN
+F 2 "D0603F" H 10250 4400 50  0001 C CNN
+F 3 "" H 10250 4400 50  0000 C CNN
+	1    10250 4400
 	-1   0    0    -1  
 $EndComp
 Text Notes 10200 5750 0    31   ~ 0
@@ -1592,14 +1584,14 @@ Wire Wire Line
 $Comp
 L tinkerforge:3V3 #PWR?
 U 1 1 65D02FC6
-P 11000 3300
+P 11000 4400
 AR Path="/5DF4E89A/65D02FC6" Ref="#PWR?"  Part="1" 
 AR Path="/65D02FC6" Ref="#PWR0160"  Part="1" 
-F 0 "#PWR0160" H 11000 3400 40  0001 C CNN
-F 1 "3V3" H 11000 3425 40  0000 C CNN
-F 2 "" H 11000 3300 60  0000 C CNN
-F 3 "" H 11000 3300 60  0000 C CNN
-	1    11000 3300
+F 0 "#PWR0160" H 11000 4500 40  0001 C CNN
+F 1 "3V3" H 11000 4525 40  0000 C CNN
+F 2 "" H 11000 4400 60  0000 C CNN
+F 3 "" H 11000 4400 60  0000 C CNN
+	1    11000 4400
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1621,22 +1613,15 @@ Connection ~ 14500 9600
 Connection ~ 14500 8000
 Connection ~ 14500 5300
 Wire Wire Line
-	10300 5000 9600 5000
+	10300 5400 9600 5400
 Wire Wire Line
-	9600 3300 10050 3300
+	9600 4400 10050 4400
 Wire Wire Line
-	9600 6200 9700 6200
+	9600 4300 9700 4300
 NoConn ~ 9600 5600
 NoConn ~ 9600 5500
-NoConn ~ 9600 5400
 NoConn ~ 9600 5300
-NoConn ~ 9600 5100
 NoConn ~ 9600 4500
-NoConn ~ 9600 3600
-NoConn ~ 9600 3500
-NoConn ~ 9600 3400
-NoConn ~ 9600 3200
-NoConn ~ 9600 4300
 $Comp
 L tinkerforge:USB2514B U101
 U 1 1 5E62150A
@@ -3359,29 +3344,29 @@ Text GLabel 4300 7300 2    39   Output ~ 0
 MPCIE_DM
 Text GLabel 4300 7100 2    39   Output ~ 0
 MPCIE_DP
-Text GLabel 7250 3950 2    50   Output ~ 0
+Text GLabel 9700 6200 2    39   Output ~ 0
 MPCIE_PPS
-Text GLabel 7250 4250 2    50   Input ~ 0
+Text GLabel 9700 5100 2    39   Input ~ 0
 MPCIE_#RESET
-Text GLabel 7250 4050 2    50   Output ~ 0
+Text GLabel 9700 5000 2    39   Output ~ 0
 MPCIE_#DISABLE
-Text GLabel 7250 4650 2    39   Output ~ 0
+Text GLabel 9700 6000 2    39   Output ~ 0
 MPCIE_LED_WIFI
-Text GLabel 7250 4850 2    39   Output ~ 0
+Text GLabel 9700 6100 2    39   Output ~ 0
 MPCIE_LED_WPAN
-Text GLabel 7250 4450 2    39   Output ~ 0
+Text GLabel 9700 5200 2    39   Output ~ 0
 MPCIE_LED_WWAN
-Text GLabel 7150 5200 2    39   Output ~ 0
+Text GLabel 9750 3000 2    39   Output ~ 0
 LM813_LED_WL
-Text GLabel 7150 5300 2    39   Output ~ 0
+Text GLabel 9800 7850 2    39   Output ~ 0
 LM813_BT_WAKE_HOST
-Text GLabel 7150 5100 2    39   Output ~ 0
+Text GLabel 9800 7550 2    39   Output ~ 0
 LM813_LED_BT
-Text GLabel 7350 5550 2    39   Input ~ 0
+Text GLabel 9700 5900 2    39   Output ~ 0
 LM813_EN
-Text GLabel 7350 5800 2    39   Input ~ 0
+Text GLabel 9800 7450 2    39   Output ~ 0
 LM813_BT_DIS
-Text GLabel 7350 6200 2    39   Input ~ 0
+Text GLabel 9750 3100 2    39   Input ~ 0
 LM813_WLAN_DIS
 Text GLabel 4300 7700 2    39   Output ~ 0
 LM813_DM
@@ -3391,21 +3376,21 @@ Text GLabel 4300 6850 2    39   Output ~ 0
 MSATA_DM
 Text GLabel 4300 6650 2    39   Output ~ 0
 MSATA_DP
-Text GLabel 7450 7750 2    39   Input ~ 0
+Text GLabel 9700 3500 2    39   Input ~ 0
 MSATA_SPI_CLK
-Text GLabel 7450 7650 2    39   Input ~ 0
+Text GLabel 9700 3700 2    39   Input ~ 0
 MSATA_SPI_DO
-Text GLabel 7450 7550 2    39   Output ~ 0
+Text GLabel 9700 3600 2    39   Output ~ 0
 MSATA_SPI_DI
-Text GLabel 7450 7450 2    39   Input ~ 0
+Text GLabel 9700 3400 2    39   Input ~ 0
 MSATA_SPI_CS
-Text GLabel 7550 8450 2    39   Output ~ 0
+Text GLabel 9750 3200 2    39   Output ~ 0
 MSATA_RX
-Text GLabel 7550 8550 2    39   Input ~ 0
+Text GLabel 9750 3300 2    39   Input ~ 0
 MSATA_TX
-Text GLabel 7600 7250 2    39   Input ~ 0
+Text GLabel 9700 6400 2    39   Input ~ 0
 MSATA_ACTIVITY_LED
-Text GLabel 7600 8100 2    39   Output ~ 0
+Text GLabel 9700 6300 2    39   Output ~ 0
 MSATA_EN
 NoConn ~ 2350 6750
 NoConn ~ 2350 7300
@@ -3703,4 +3688,60 @@ F 3 "" H 4650 6200 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4650 6200 4600 6200
+Wire Wire Line
+	9600 3400 9700 3400
+Wire Wire Line
+	9600 3500 9700 3500
+Wire Wire Line
+	9600 3600 9700 3600
+Wire Wire Line
+	9600 3700 9700 3700
+Text Notes 10200 3750 0    31   ~ 0
+AF0
+Text Notes 10200 3650 0    31   ~ 0
+AF0
+Text Notes 10200 3550 0    31   ~ 0
+AF0
+Text Notes 10200 3450 0    31   ~ 0
+AF0
+Text Notes 10200 3350 0    31   ~ 0
+USART2-RX (AF1)
+Text Notes 10200 3250 0    31   ~ 0
+USART2-TX (AF1)
+Wire Wire Line
+	9600 3200 9750 3200
+Wire Wire Line
+	9750 3300 9600 3300
+Wire Wire Line
+	9600 3000 9750 3000
+Wire Wire Line
+	9750 3100 9600 3100
+Wire Wire Line
+	9600 5900 9700 5900
+Wire Wire Line
+	9600 7450 9800 7450
+Wire Wire Line
+	9800 7550 9600 7550
+Wire Wire Line
+	9600 7850 9800 7850
+Wire Wire Line
+	9600 6000 9700 6000
+Wire Wire Line
+	9700 6100 9600 6100
+Wire Wire Line
+	9600 6200 9700 6200
+Wire Wire Line
+	9600 6300 9700 6300
+Wire Wire Line
+	9700 6400 9600 6400
+Wire Wire Line
+	9600 5200 9700 5200
+Wire Wire Line
+	9700 5100 9600 5100
+Wire Wire Line
+	9600 5000 9700 5000
+Text GLabel 13500 3800 1    39   Output ~ 0
+LDO-IN
+Wire Wire Line
+	13500 3850 13500 3800
 $EndSCHEMATC
