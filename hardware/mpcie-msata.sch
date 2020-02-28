@@ -1760,7 +1760,7 @@ F 1 "744230900" H 12100 5490 60  0000 C CNN
 F 2 "kicad-libraries:WE-CNSW-0603" H 12100 5640 60  0001 C CNN
 F 3 "" H 12100 5640 60  0000 C CNN
 	1    12100 5650
-	1    0    0    1   
+	-1   0    0    1   
 $EndComp
 $Comp
 L tinkerforge:GND #PWR0104
@@ -1798,7 +1798,7 @@ F 1 "82400152" V 13410 5635 60  0000 C CNN
 F 2 "SOT563-SPEC" H 13050 5635 60  0001 C CNN
 F 3 "" H 13050 5635 60  0000 C CNN
 	1    13050 5650
-	0    1    1    0   
+	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	11700 5750 11800 5750
