@@ -1723,8 +1723,6 @@ Wire Wire Line
 Wire Wire Line
 	13800 7150 14750 7150
 Wire Wire Line
-	14700 9100 13700 9100
-Wire Wire Line
 	13700 9100 13700 7250
 Wire Wire Line
 	13700 7250 14750 7250
@@ -3744,4 +3742,6 @@ Text GLabel 13500 3800 1    39   Output ~ 0
 LDO-IN
 Wire Wire Line
 	13500 3850 13500 3800
+Wire Wire Line
+	13700 9100 14750 9100
 $EndSCHEMATC
