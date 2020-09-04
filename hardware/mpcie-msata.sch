@@ -4,12 +4,12 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
-Title ""
-Date "2018-09-12"
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "TNG MPCIE MSATA"
+Date "2020-09-04"
+Rev "1.1"
+Comp "Tinkerforge GmbH"
+Comment1 "Licensed under CERN OHL v.1.1"
+Comment2 "Copyright (©) 2020, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -150,17 +150,6 @@ Wire Wire Line
 Wire Wire Line
 	2750 3400 2650 3400
 Connection ~ 2400 3400
-$Comp
-L tinkerforge:Rs R107
-U 1 1 5C92C671
-P 2500 8950
-F 0 "R107" V 2550 8950 31  0000 C CNN
-F 1 "DNP" V 2500 8950 31  0000 C CNN
-F 2 "R0402F" H 2500 8950 60  0001 C CNN
-F 3 "" H 2500 8950 60  0000 C CNN
-	1    2500 8950
-	0    -1   -1   0   
-$EndComp
 $Comp
 L tinkerforge:GND #PWR0122
 U 1 1 5C92C741
@@ -1799,52 +1788,11 @@ Wire Wire Line
 	14150 5550 14150 5400
 Wire Wire Line
 	13500 5400 14150 5400
-$Comp
-L tinkerforge:INDUCTs L110
-U 1 1 5F7E87EF
-P 13600 5200
-F 0 "L110" V 13454 5200 31  0000 C CNN
-F 1 "INDUCTs" V 13516 5200 31  0000 C CNN
-F 2 "kicad-libraries:R0805E" V 13494 5200 60  0001 C CNN
-F 3 "" H 13600 5200 60  0000 C CNN
-	1    13600 5200
-	-1   0    0    1   
-$EndComp
-Connection ~ 13600 5300
-$Comp
-L tinkerforge:CPs C145
-U 1 1 5F7F1966
-P 13400 4950
-F 0 "C145" V 13450 4750 31  0000 L CNN
-F 1 ">100uF" V 13300 4700 31  0000 L CNN
-F 2 "ELKO_63" H 13500 4888 60  0001 L CNN
-F 3 "" H 13400 4950 60  0000 C CNN
-	1    13400 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L tinkerforge:GND #PWR0106
-U 1 1 5F7F82D8
-P 13400 5100
-F 0 "#PWR0106" H 13400 5100 30  0001 C CNN
-F 1 "GND" H 13400 5030 30  0001 C CNN
-F 2 "" H 13400 5100 60  0000 C CNN
-F 3 "" H 13400 5100 60  0000 C CNN
-	1    13400 5100
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	13400 5100 13400 5050
-Wire Wire Line
-	13600 5100 13600 4850
-Wire Wire Line
-	13600 4850 13400 4850
-Connection ~ 13400 4850
 Text GLabel 3000 9350 2    39   Input ~ 0
 USB_RESET
 Text GLabel 3300 8750 2    39   BiDi ~ 0
 USB_SMB_DATA
-Text GLabel 3300 8850 2    39   Input ~ 0
+Text GLabel 4050 8850 2    39   Input ~ 0
 USB_SMB_CLK
 $Comp
 L tinkerforge:GND #PWR?
@@ -1931,7 +1879,7 @@ L tinkerforge:Rs R111
 U 1 1 5C8E5DAA
 P 3150 8600
 F 0 "R111" V 3200 8600 31  0000 C CNN
-F 1 "DNP" V 3150 8600 31  0000 C CNN
+F 1 "10k" V 3150 8600 31  0000 C CNN
 F 2 "R0402F" H 3150 8600 60  0001 C CNN
 F 3 "" H 3150 8600 60  0000 C CNN
 	1    3150 8600
@@ -2070,66 +2018,33 @@ Wire Wire Line
 $Comp
 L tinkerforge:Rs R109
 U 1 1 6071E084
-P 2500 9050
-F 0 "R109" V 2550 9050 31  0000 C CNN
-F 1 "10k" V 2500 9050 31  0000 C CNN
-F 2 "R0402F" H 2500 9050 60  0001 C CNN
-F 3 "" H 2500 9050 60  0000 C CNN
-	1    2500 9050
+P 2500 8950
+F 0 "R109" V 2550 8950 31  0000 C CNN
+F 1 "10k" V 2500 8950 31  0000 C CNN
+F 2 "R0402F" H 2500 8950 60  0001 C CNN
+F 3 "" H 2500 8950 60  0000 C CNN
+	1    2500 8950
 	0    -1   -1   0   
 $EndComp
-$Comp
-L tinkerforge:3V3 #PWR?
-U 1 1 6071E549
-P 2700 9050
-AR Path="/5DF4E89A/6071E549" Ref="#PWR?"  Part="1" 
-AR Path="/6071E549" Ref="#PWR0113"  Part="1" 
-F 0 "#PWR0113" H 2700 9150 40  0001 C CNN
-F 1 "3V3" H 2700 9175 40  0000 C CNN
-F 2 "" H 2700 9050 60  0000 C CNN
-F 3 "" H 2700 9050 60  0000 C CNN
-	1    2700 9050
-	0    1    -1   0   
-$EndComp
-Wire Wire Line
-	2400 8950 2400 9050
-Connection ~ 2400 8950
-Wire Wire Line
-	2600 9050 2700 9050
-Text Notes 3150 9050 0    50   ~ 0
-0 Default config, bus powered option\n1 hub is configured over 2-wire I2C EEPROM
+Text Notes 4000 8750 0    50   ~ 0
+0 0 Default config, self powered option\n0 1 hub is configured over SMBus
 Wire Wire Line
 	2350 6000 3050 6000
 Wire Wire Line
 	3050 6100 2350 6100
-Text Notes 3300 9150 0    50   ~ 0
-SMB_CLK low + CSEL1 low = Default
-$Comp
-L tinkerforge:Rs R117
-U 1 1 608F3424
-P 3250 8600
-F 0 "R117" V 3300 8600 31  0000 C CNN
-F 1 "10k" V 3250 8600 31  0000 C CNN
-F 2 "R0402F" H 3250 8600 60  0001 C CNN
-F 3 "" H 3250 8600 60  0000 C CNN
-	1    3250 8600
-	-1   0    0    1   
-$EndComp
 $Comp
 L tinkerforge:GND #PWR0114
 U 1 1 608F3D21
-P 3350 8550
-F 0 "#PWR0114" H 3350 8550 30  0001 C CNN
-F 1 "GND" H 3350 8480 30  0001 C CNN
-F 2 "" H 3350 8550 60  0000 C CNN
-F 3 "" H 3350 8550 60  0000 C CNN
-	1    3350 8550
+P 3650 9300
+F 0 "#PWR0114" H 3650 9300 30  0001 C CNN
+F 1 "GND" H 3650 9230 30  0001 C CNN
+F 2 "" H 3650 9300 60  0000 C CNN
+F 3 "" H 3650 9300 60  0000 C CNN
+	1    3650 9300
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 8500 3350 8500
-Wire Wire Line
-	3350 8500 3350 8550
+	3650 9250 3650 9300
 $Comp
 L tinkerforge:Cs C117
 U 1 1 609B70E2
@@ -2171,13 +2086,6 @@ Wire Wire Line
 Wire Wire Line
 	3150 8700 3150 8850
 Connection ~ 3150 8850
-Wire Wire Line
-	3150 8850 3250 8850
-Wire Wire Line
-	3250 8700 3250 8850
-Connection ~ 3250 8850
-Wire Wire Line
-	3250 8850 3300 8850
 $Comp
 L tinkerforge:Cs C105
 U 1 1 60C5BEAF
@@ -2756,22 +2664,11 @@ $EndComp
 Wire Wire Line
 	13600 5300 13900 5300
 $Comp
-L tinkerforge:5V #PWR0138
-U 1 1 625B39BD
-P 13050 4850
-F 0 "#PWR0138" H 13050 4950 40  0001 C CNN
-F 1 "5V" H 13059 5006 40  0000 C CNN
-F 2 "" H 13050 4850 60  0000 C CNN
-F 3 "" H 13050 4850 60  0000 C CNN
-	1    13050 4850
-	1    0    0    -1  
-$EndComp
-$Comp
 L tinkerforge:CPs C151
 U 1 1 625D7D2A
 P 13900 5750
 F 0 "C151" H 14000 5800 31  0000 L CNN
-F 1 ">100uF" H 13950 5650 31  0000 L CNN
+F 1 "100uF" H 13950 5650 31  0000 L CNN
 F 2 "ELKO_63" H 14000 5688 60  0001 L CNN
 F 3 "" H 13900 5750 60  0000 C CNN
 	1    13900 5750
@@ -2795,14 +2692,12 @@ Wire Wire Line
 Connection ~ 13900 5300
 Wire Wire Line
 	13900 5300 14150 5300
-Wire Wire Line
-	13050 4850 13400 4850
 $Comp
 L tinkerforge:CPs C148
 U 1 1 627110CD
 P 13600 4500
 F 0 "C148" H 13700 4550 31  0000 L CNN
-F 1 ">100uF" H 13650 4400 31  0000 L CNN
+F 1 "100uF" H 13650 4400 31  0000 L CNN
 F 2 "ELKO_63" H 13700 4438 60  0001 L CNN
 F 3 "" H 13600 4500 60  0000 C CNN
 	1    13600 4500
@@ -3043,7 +2938,7 @@ L tinkerforge:CPs C150
 U 1 1 62FE288D
 P 13800 2900
 F 0 "C150" H 13900 2950 31  0000 L CNN
-F 1 ">100uF" H 13850 2800 31  0000 L CNN
+F 1 "100uF" H 13850 2800 31  0000 L CNN
 F 2 "ELKO_63" H 13900 2838 60  0001 L CNN
 F 3 "" H 13800 2900 60  0000 C CNN
 	1    13800 2900
@@ -3354,22 +3249,6 @@ Text GLabel 9700 6100 2    39   Output ~ 0
 MPCIE_LED_WPAN
 Text GLabel 9700 5200 2    39   Output ~ 0
 MPCIE_LED_WWAN
-Text GLabel 9750 3000 2    39   Output ~ 0
-LM813_LED_WL
-Text GLabel 9800 7850 2    39   Output ~ 0
-LM813_BT_WAKE_HOST
-Text GLabel 9800 7550 2    39   Output ~ 0
-LM813_LED_BT
-Text GLabel 9700 5900 2    39   Output ~ 0
-LM813_EN
-Text GLabel 9800 7450 2    39   Output ~ 0
-LM813_BT_DIS
-Text GLabel 9750 3100 2    39   Input ~ 0
-LM813_WLAN_DIS
-Text GLabel 4300 7700 2    39   Output ~ 0
-LM813_DM
-Text GLabel 4300 7500 2    39   Output ~ 0
-LM813_DP
 Text GLabel 4300 6850 2    39   Output ~ 0
 MSATA_DM
 Text GLabel 4300 6650 2    39   Output ~ 0
@@ -3507,17 +3386,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 6200 4200 6200
 $Comp
-L tinkerforge:WE-CNSW L104
-U 1 1 65B5D1CC
-P 3900 7600
-F 0 "L104" H 3900 7770 60  0000 C CNN
-F 1 "744230900" H 3900 7440 60  0000 C CNN
-F 2 "WE-CNSW-0603" H 3900 7590 60  0001 C CNN
-F 3 "" H 3900 7590 60  0000 C CNN
-	1    3900 7600
-	1    0    0    1   
-$EndComp
-$Comp
 L tinkerforge:WE-CNSW L105
 U 1 1 65B5D851
 P 3900 6750
@@ -3544,22 +3412,6 @@ Wire Wire Line
 	4200 7100 4300 7100
 Wire Wire Line
 	4300 7300 4200 7300
-Wire Wire Line
-	3600 7700 3300 7700
-Wire Wire Line
-	3300 7700 3300 7650
-Wire Wire Line
-	3300 7650 2350 7650
-Wire Wire Line
-	2350 7550 3300 7550
-Wire Wire Line
-	3300 7550 3300 7500
-Wire Wire Line
-	3300 7500 3600 7500
-Wire Wire Line
-	4200 7500 4300 7500
-Wire Wire Line
-	4300 7700 4200 7700
 Wire Wire Line
 	4200 6650 4300 6650
 Wire Wire Line
@@ -3711,18 +3563,6 @@ Wire Wire Line
 Wire Wire Line
 	9750 3300 9600 3300
 Wire Wire Line
-	9600 3000 9750 3000
-Wire Wire Line
-	9750 3100 9600 3100
-Wire Wire Line
-	9600 5900 9700 5900
-Wire Wire Line
-	9600 7450 9800 7450
-Wire Wire Line
-	9800 7550 9600 7550
-Wire Wire Line
-	9600 7850 9800 7850
-Wire Wire Line
 	9600 6000 9700 6000
 Wire Wire Line
 	9700 6100 9600 6100
@@ -3744,4 +3584,43 @@ Wire Wire Line
 	13500 3850 13500 3800
 Wire Wire Line
 	13700 9100 14750 9100
+$Comp
+L tinkerforge:MOSFET_N_CH Q101
+U 1 1 5F16A4BB
+P 3750 9050
+F 0 "Q101" H 3941 9096 50  0000 L CNN
+F 1 "2N7002" H 3941 9005 50  0000 L CNN
+F 2 "kicad-libraries:SOT23GDS" H 3950 9150 50  0001 C CNN
+F 3 "" H 3750 9050 50  0000 C CNN
+	1    3750 9050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 8850 3650 8850
+Wire Wire Line
+	3650 8850 4050 8850
+Connection ~ 3650 8850
+Text GLabel 9700 6900 2    39   Output ~ 0
+BOOT
+Wire Wire Line
+	9650 7150 9650 6900
+Wire Wire Line
+	9650 6900 9700 6900
+Text GLabel 4200 9050 2    39   Input ~ 0
+BOOT
+Wire Wire Line
+	3950 9050 4200 9050
+Text Notes 4000 9350 0    50   ~ 0
+Inv Boot\n-> during boot press 1 -> 0\n-> SMBus default config
+NoConn ~ 9600 5900
+NoConn ~ 9600 3100
+NoConn ~ 9600 3000
+NoConn ~ 9600 7850
+NoConn ~ 9600 7550
+NoConn ~ 9600 7450
+NoConn ~ 2350 7650
+NoConn ~ 2350 7550
+NoConn ~ 9600 6500
+Text Notes 6150 1650 0    39   ~ 0
+Copyright Tinkerforge GmbH 2020.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions
 $EndSCHEMATC

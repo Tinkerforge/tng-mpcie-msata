@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "TNG MPCIE MSATA"
+Date "2020-09-04"
+Rev "1.1"
+Comp "Tinkerforge GmbH"
+Comment1 "Licensed under CERN OHL v.1.1"
+Comment2 "Copyright (©) 2020, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -611,7 +611,7 @@ U 1 1 64156C82
 P 3450 3000
 F 0 "C310" V 3257 3000 31  0000 C CNN
 F 1 "10nF" V 3319 3000 31  0000 C CNN
-F 2 "kicad-libraries:C0402E" H 3450 3000 60  0001 C CNN
+F 2 "kicad-libraries:C0402F" H 3450 3000 60  0001 C CNN
 F 3 "" H 3450 3000 60  0000 C CNN
 	1    3450 3000
 	0    1    1    0   
@@ -622,7 +622,7 @@ U 1 1 64158B40
 P 3450 3300
 F 0 "C311" V 3257 3300 31  0000 C CNN
 F 1 "10nF" V 3319 3300 31  0000 C CNN
-F 2 "kicad-libraries:C0402E" H 3450 3300 60  0001 C CNN
+F 2 "kicad-libraries:C0402F" H 3450 3300 60  0001 C CNN
 F 3 "" H 3450 3300 60  0000 C CNN
 	1    3450 3300
 	0    1    1    0   
@@ -633,7 +633,7 @@ U 1 1 64158FFE
 P 3450 3600
 F 0 "C312" V 3257 3600 31  0000 C CNN
 F 1 "10nF" V 3319 3600 31  0000 C CNN
-F 2 "kicad-libraries:C0402E" H 3450 3600 60  0001 C CNN
+F 2 "kicad-libraries:C0402F" H 3450 3600 60  0001 C CNN
 F 3 "" H 3450 3600 60  0000 C CNN
 	1    3450 3600
 	0    1    1    0   
@@ -644,7 +644,7 @@ U 1 1 641594CF
 P 3450 3900
 F 0 "C313" V 3257 3900 31  0000 C CNN
 F 1 "10nF" V 3319 3900 31  0000 C CNN
-F 2 "kicad-libraries:C0402E" H 3450 3900 60  0001 C CNN
+F 2 "kicad-libraries:C0402F" H 3450 3900 60  0001 C CNN
 F 3 "" H 3450 3900 60  0000 C CNN
 	1    3450 3900
 	0    1    1    0   
@@ -2414,10 +2414,10 @@ Wire Wire Line
 Wire Wire Line
 	1900 800  1900 900 
 $Comp
-L tinkerforge:GND #PWR?
+L tinkerforge:GND #PWR0176
 U 1 1 5E7A9E14
 P 750 6700
-F 0 "#PWR?" H 750 6450 50  0001 C CNN
+F 0 "#PWR0176" H 750 6450 50  0001 C CNN
 F 1 "GND" H 755 6527 50  0000 C CNN
 F 2 "" H 750 6700 50  0000 C CNN
 F 3 "" H 750 6700 50  0000 C CNN

@@ -4,12 +4,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "TNG MPCIE MSATA"
+Date "2020-09-04"
+Rev "1.1"
+Comp "Tinkerforge GmbH"
+Comment1 "Licensed under CERN OHL v.1.1"
+Comment2 "Copyright (©) 2020, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -24,101 +24,6 @@ F 3 "" H 1150 1350 50  0001 C CNN
 	1    1150 1350
 	1    0    0    -1  
 $EndComp
-$Comp
-L tinkerforge:LM813 U201
-U 1 1 62220F08
-P 6250 3100
-F 0 "U201" H 5750 1100 50  0000 C CNN
-F 1 "LM813" H 6100 1100 50  0000 C CNN
-F 2 "kicad-libraries:LM813" H 6250 3100 50  0001 C CNN
-F 3 "" H 6250 3100 50  0001 C CNN
-	1    6250 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L tinkerforge:GND #PWR?
-U 1 1 622FBEA8
-P 6450 5050
-AR Path="/622FBEA8" Ref="#PWR?"  Part="1" 
-AR Path="/622180D6/622FBEA8" Ref="#PWR0176"  Part="1" 
-F 0 "#PWR0176" H 6450 5050 30  0001 C CNN
-F 1 "GND" H 6450 4980 30  0001 C CNN
-F 2 "" H 6450 5050 60  0000 C CNN
-F 3 "" H 6450 5050 60  0000 C CNN
-	1    6450 5050
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6350 4000 6450 4000
-Wire Wire Line
-	6450 4000 6450 5050
-Wire Wire Line
-	6350 3800 6450 3800
-Wire Wire Line
-	6450 3800 6450 4000
-Connection ~ 6450 4000
-Wire Wire Line
-	6350 3600 6450 3600
-Wire Wire Line
-	6450 3600 6450 3800
-Connection ~ 6450 3800
-Text GLabel 6550 3400 2    39   Input ~ 0
-LM813_DM
-Text GLabel 6550 3500 2    39   Input ~ 0
-LM813_DP
-Wire Wire Line
-	6350 3400 6550 3400
-Wire Wire Line
-	6550 3500 6350 3500
-NoConn ~ 6350 3900
-Text GLabel 7050 4300 2    39   Input ~ 0
-LM813_EN
-Text GLabel 8550 4250 2    39   Output ~ 0
-LM813_LED_WL
-NoConn ~ 6350 5000
-Wire Wire Line
-	6550 4800 6350 4800
-Wire Wire Line
-	6350 4500 6550 4500
-Text GLabel 8550 4450 2    39   Output ~ 0
-LM813_BT_WAKE_HOST
-NoConn ~ 6350 4200
-NoConn ~ 6350 4400
-NoConn ~ 6350 4600
-Text GLabel 8550 4350 2    39   Output ~ 0
-LM813_LED_BT
-$Comp
-L tinkerforge:Cs C?
-U 1 1 62379BE3
-P 7150 3400
-AR Path="/5DF4E89A/62379BE3" Ref="C?"  Part="1" 
-AR Path="/62379BE3" Ref="C?"  Part="1" 
-AR Path="/622180D6/62379BE3" Ref="C208"  Part="1" 
-F 0 "C208" H 7175 3475 31  0000 L CNN
-F 1 "10uF" H 7175 3325 31  0000 L CNN
-F 2 "C0805" H 7150 3400 60  0001 C CNN
-F 3 "" H 7150 3400 60  0000 C CNN
-	1    7150 3400
-	-1   0    0    -1  
-$EndComp
-Connection ~ 7150 3300
-$Comp
-L tinkerforge:GND #PWR?
-U 1 1 6237E523
-P 7150 3600
-AR Path="/6237E523" Ref="#PWR?"  Part="1" 
-AR Path="/622180D6/6237E523" Ref="#PWR0177"  Part="1" 
-F 0 "#PWR0177" H 7150 3600 30  0001 C CNN
-F 1 "GND" H 7150 3530 30  0001 C CNN
-F 2 "" H 7150 3600 60  0000 C CNN
-F 3 "" H 7150 3600 60  0000 C CNN
-	1    7150 3600
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7150 3600 7150 3500
-Wire Wire Line
-	6350 3300 7150 3300
 Text GLabel 2650 5050 2    39   Input ~ 0
 MPCIE_DM
 Text GLabel 2650 5250 2    39   Input ~ 0
@@ -232,24 +137,13 @@ Connection ~ 1550 5550
 Wire Wire Line
 	1550 5550 1550 5350
 $Comp
-L tinkerforge:5V #PWR0180
-U 1 1 638F79A8
-P 7500 3300
-F 0 "#PWR0180" H 7500 3400 40  0001 C CNN
-F 1 "5V" V 7509 3418 40  0000 L CNN
-F 2 "" H 7500 3300 60  0000 C CNN
-F 3 "" H 7500 3300 60  0000 C CNN
-	1    7500 3300
-	0    1    1    0   
-$EndComp
-$Comp
 L tinkerforge:CPs C?
 U 1 1 638FE62A
 P 2050 1750
 AR Path="/638FE62A" Ref="C?"  Part="1" 
 AR Path="/622180D6/638FE62A" Ref="C202"  Part="1" 
 F 0 "C202" V 2100 1550 31  0000 L CNN
-F 1 ">100uF" V 1950 1500 31  0000 L CNN
+F 1 "100uF" V 1950 1500 31  0000 L CNN
 F 2 "ELKO_63" H 2150 1688 60  0001 L CNN
 F 3 "" H 2050 1750 60  0000 C CNN
 	1    2050 1750
@@ -669,114 +563,6 @@ Wire Wire Line
 NoConn ~ 1750 5950
 NoConn ~ 2150 5950
 $Comp
-L tinkerforge:R_PACK4 RP202
-U 1 1 63A37F90
-P 8150 4500
-F 0 "RP202" H 8150 4350 50  0000 C CNN
-F 1 "1k" H 8150 4450 50  0000 C CNN
-F 2 "kicad-libraries:4X0402" H 8150 4500 50  0001 C CNN
-F 3 "" H 8150 4500 50  0000 C CNN
-	1    8150 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6850 3700 6850 3850
-Wire Wire Line
-	6850 3850 7850 3850
-Wire Wire Line
-	7850 3850 7850 4250
-Wire Wire Line
-	7850 4250 7950 4250
-Wire Wire Line
-	6350 3700 6850 3700
-Wire Wire Line
-	8550 4250 8350 4250
-Wire Wire Line
-	6350 4100 7750 4100
-$Comp
-L tinkerforge:Rs R207
-U 1 1 63A6FF6A
-P 7000 4150
-F 0 "R207" V 6950 4150 31  0000 C CNN
-F 1 "1k" V 7000 4150 31  0000 C CNN
-F 2 "kicad-libraries:R0402F" V 6894 4150 60  0001 C CNN
-F 3 "" H 7000 4150 60  0000 C CNN
-	1    7000 4150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L tinkerforge:GND #PWR?
-U 1 1 63A71144
-P 7200 4150
-AR Path="/63A71144" Ref="#PWR?"  Part="1" 
-AR Path="/622180D6/63A71144" Ref="#PWR0191"  Part="1" 
-F 0 "#PWR0191" H 7200 4150 30  0001 C CNN
-F 1 "GND" H 7200 4080 30  0001 C CNN
-F 2 "" H 7200 4150 60  0000 C CNN
-F 3 "" H 7200 4150 60  0000 C CNN
-	1    7200 4150
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	7100 4150 7200 4150
-Wire Wire Line
-	6900 4150 6850 4150
-Wire Wire Line
-	6850 4150 6850 4300
-Wire Wire Line
-	6850 4300 7050 4300
-Wire Wire Line
-	6350 4300 6850 4300
-Connection ~ 6850 4300
-Text Notes 6550 4400 0    50   ~ 0
-active high? -> pullup
-$Comp
-L tinkerforge:Rs R205
-U 1 1 63A842EF
-P 6650 4450
-F 0 "R205" V 6600 4450 31  0000 C CNN
-F 1 "1k" V 6650 4450 31  0000 C CNN
-F 2 "kicad-libraries:R0402F" V 6544 4450 60  0001 C CNN
-F 3 "" H 6650 4450 60  0000 C CNN
-	1    6650 4450
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6750 4450 6800 4450
-$Comp
-L tinkerforge:Rs R206
-U 1 1 63A8C1BB
-P 6650 4800
-F 0 "R206" V 6600 4800 31  0000 C CNN
-F 1 "1k" V 6650 4800 31  0000 C CNN
-F 2 "kicad-libraries:R0402F" V 6544 4800 60  0001 C CNN
-F 3 "" H 6650 4800 60  0000 C CNN
-	1    6650 4800
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6750 4800 6800 4800
-Text GLabel 7050 4550 2    39   Input ~ 0
-LM813_BT_DIS
-Wire Wire Line
-	7050 4550 6550 4550
-Wire Wire Line
-	6550 4550 6550 4500
-Wire Wire Line
-	6550 4450 6550 4500
-Connection ~ 6550 4500
-NoConn ~ 6350 4700
-NoConn ~ 6350 4900
-Text GLabel 7050 4950 2    39   Input ~ 0
-LM813_WLAN_DIS
-Wire Wire Line
-	6550 4800 6550 4950
-Wire Wire Line
-	6550 4950 7050 4950
-Connection ~ 6550 4800
-Wire Wire Line
-	7150 3300 7500 3300
-$Comp
 L tinkerforge:INDUCTs L?
 U 1 1 66D76BBC
 P 2350 1650
@@ -840,48 +626,10 @@ Wire Wire Line
 Wire Wire Line
 	2600 1900 2600 1850
 Wire Wire Line
-	7900 3200 6350 3200
-NoConn ~ 7950 4150
-NoConn ~ 8350 4150
-Wire Wire Line
-	8550 4350 8350 4350
-Wire Wire Line
-	8550 4450 8350 4450
-$Comp
-L tinkerforge:3V3 #PWR0192
-U 1 1 680DFABD
-P 6800 4450
-F 0 "#PWR0192" H 6800 4300 50  0001 C CNN
-F 1 "3V3" V 6815 4578 50  0000 L CNN
-F 2 "" H 6800 4450 50  0000 C CNN
-F 3 "" H 6800 4450 50  0000 C CNN
-	1    6800 4450
-	0    1    1    0   
-$EndComp
-$Comp
-L tinkerforge:3V3 #PWR0193
-U 1 1 680E002C
-P 6800 4800
-F 0 "#PWR0193" H 6800 4650 50  0001 C CNN
-F 1 "3V3" V 6815 4928 50  0000 L CNN
-F 2 "" H 6800 4800 50  0000 C CNN
-F 3 "" H 6800 4800 50  0000 C CNN
-	1    6800 4800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
 	1550 3700 1750 3700
 Connection ~ 1550 3700
 Wire Wire Line
 	1550 3700 1550 1650
-Wire Wire Line
-	7900 4450 7950 4450
-Wire Wire Line
-	7900 3200 7900 4450
-Wire Wire Line
-	7950 4350 7750 4350
-Wire Wire Line
-	7750 4350 7750 4100
 Text GLabel 2000 1550 0    39   Input ~ 0
 3V3-MPCIE
 Wire Wire Line
@@ -893,8 +641,8 @@ L tinkerforge:GND #PWR?
 U 1 1 5E7F64DF
 P 700 7000
 AR Path="/5E7F64DF" Ref="#PWR?"  Part="1" 
-AR Path="/622180D6/5E7F64DF" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 700 7000 30  0001 C CNN
+AR Path="/622180D6/5E7F64DF" Ref="#PWR0113"  Part="1" 
+F 0 "#PWR0113" H 700 7000 30  0001 C CNN
 F 1 "GND" H 700 6930 30  0001 C CNN
 F 2 "" H 700 7000 60  0000 C CNN
 F 3 "" H 700 7000 60  0000 C CNN
@@ -907,4 +655,6 @@ Wire Wire Line
 	700  7000 700  6950
 Text Notes 800  6850 0    39   ~ 0
 2041119-1
+Text Notes 2950 3850 0    50   ~ 0
+for RAK2247 it is active high!
 $EndSCHEMATC
